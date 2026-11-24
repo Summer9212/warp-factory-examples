@@ -105,6 +105,14 @@ Check that an example is a valid factory definition:
 python3 scripts/validate_factory_files.py examples/01-single-repo-quickstart
 ```
 
+To validate only the SDLC issue-to-PR example, run:
+
+```bash
+python3 scripts/validate_factory_files.py examples/*sdlc-issue-to-pr
+```
+
+An exit code of `2` means validation did not run and is not a pass.
+
 ## Layout rules
 
 - A resource's name is its path: `agents/<name>/agent.md`,
