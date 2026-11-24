@@ -26,6 +26,7 @@ code 2 means validation did not run and is not a pass.
 - Preserve the command's glob exactly as requested.
 - Report the actual outcomes of the convention check and the targeted validator
   command. Treat validator exit code 2 as not validated, not as a pass.
+- Report the final pull request scope check in the pull request description.
 
 ## Acceptance criteria
 
@@ -35,6 +36,10 @@ code 2 means validation did not run and is not a pass.
    report its actual exit code and result in the pull request.
 3. Review `README.md` manually to confirm it contains the exact command and
    the exit-code-2 warning.
+4. Run `git diff --name-only blueprint-demo...HEAD`; the final pull request
+   diff lists exactly `README.md` and
+   `docs/specs/1-document-single-example-validation.md`. Report that command
+   and its observed result in the pull request description.
 
 ## Out of scope
 
