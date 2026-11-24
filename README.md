@@ -111,6 +111,9 @@ To validate only the SDLC issue-to-PR example, run:
 python3 scripts/validate_factory_files.py examples/*sdlc-issue-to-pr
 ```
 
+The default server-backed validator needs network access to reach Warp's
+validation service.
+
 An exit code of `2` means validation did not run and is not a pass.
 
 ## Layout rules
